@@ -1,0 +1,42 @@
+---
+const logos = [
+  "/path/to/logo1.png",
+  "/path/to/logo2.png",
+  "/path/to/logo1.png",
+  "/path/to/logo2.png",
+  "/path/to/logo1.png",
+  "/path/to/logo2.png",
+  "/path/to/logo1.png",
+  "/path/to/logo2.png",
+  "/path/to/logo1.png",
+  "/path/to/logo2.png",
+];
+---
+
+<div
+  id="partner-logos"
+  class="relative overflow-hidden md:h-48 mb-16 bg-[#f7f7f7] flex justify-center items-center"
+>
+  <div class="logos-container flex justify-center items-center h-48">
+    {
+      logos.map((logo, index) => (
+        <img src={logo} alt={`Partner ${index + 1}`} class="logo h-20 mx-4" />
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .logos-container {
+    animation: scroll 20s linear infinite;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(50%);
+    }
+  }
+</style>
