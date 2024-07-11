@@ -5,6 +5,8 @@ import About from "@components/About.astro";
 import Services from "@components/Services.jsx";
 import Partners from "@components/Partners.astro";
 import Projects from "@components/Projects.astro";
+import Team from "@components/Team.astro";
+import Footer from "@components/Footer.astro";
 
 const cards = [
   {
@@ -40,4 +42,7 @@ const cards = [
   <Services cards={cards} client:visible />
   <Partners />
   <Projects />
+  <Team />
+  <hr class="border border-black w-full" />
+  <Footer />
 </Layout>
