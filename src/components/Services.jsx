@@ -22,7 +22,7 @@ function Services({ cards }) {
       <div className="text-start w-full px-14">
         <h1 className="text-4xl font-bold mb-8">Our Expertnesses</h1>
       </div>{" "}
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center flex-col md:flex-row">
         <AnimatePresence>
           {visibleCards.map((index) => (
             <motion.div

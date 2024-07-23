@@ -1,0 +1,67 @@
+---
+const list = [
+  {
+    year: 2020,
+    title: "Citrus Mood L-Shaped Modular Kitchen",
+    description: "Luxury Modern Home",
+  },
+  {
+    year: 2020,
+    title: "Nature Bliss Straight Modular Kitchen",
+    description: "Kitchen Home",
+  },
+  {
+    year: 2019,
+    title: "Woody Mist Straight Wardrobe Designs",
+    description: "Wardrobe Designs",
+  },
+  {
+    year: 2019,
+    title: "Contemporary Entertainment Wall Units",
+    description: "Entertainment",
+  },
+  {
+    year: 2018,
+    title: "Space Saving Furniture Palermo",
+    description: "Modern Furniture",
+  },
+  {
+    year: 2018,
+    title: "Eclectic Theme Interiors For Living Room",
+    description: "Modern Interiors",
+  },
+  {
+    year: 2018,
+    title: "Pop Theme Home Interiors",
+    description: "Home Interiors",
+  },
+  {
+    year: 2017,
+    title: "Kid Friendly Theme Home Interiors",
+    description: "Kid Modern Interiors",
+  },
+];
+---
+
+<main class="w-full mx-auto px-4 py-4 mb-8">
+  <h1 class="text-black text-xl sm:text-2xl md:text-5xl font-bold mb-8">
+    An Accomplish
+  </h1>
+  <div class="overflow-x-auto">
+    <table
+      class="min-w-full text-left text-black text-sm sm:text-lg md:text-2xl font-bold"
+    >
+      <tbody>
+        {
+          list.map((item) => (
+            <tr class="border-b border-black">
+              <td class="px-2 py-2 md:py-4">{item.year}</td>
+              <td class="px-2 py-2 md:py-4">{item.title}</td>
+              <td class="px-2 py-2 md:py-4">{item.description}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</main>

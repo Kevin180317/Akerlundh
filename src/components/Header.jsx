@@ -1,25 +1,35 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const Header = () => {
+const Header = ({ urlActual }) => {
+  // Accede a la URL a través de los props
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const esUrlActiva = (ruta) => {
+    // Asegúrate de normalizar tanto la URL actual como la ruta antes de comparar
+    const urlFormateada = urlActual.endsWith("/")
+      ? urlActual.slice(0, -1)
+      : urlActual; // Elimina el slash final si existe
+    const rutaFormateada = ruta.endsWith("/") ? ruta.slice(0, -1) : ruta; // Elimina el slash final si existe
+    return urlFormateada === window.location.origin + rutaFormateada;
+  };
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 w-full bg-white shadow-md z-50 border border-black"
+      className=" top-0 left-0 w-full bg-white shadow-md z-50 border border-black"
     >
       {" "}
-      <nav className="flex justify-between items-center px-4">
-        <div className="flex gap-8">
-          <img src="" alt="LOGO" />
-          <div>|</div>
+      <nav className="flex sticky justify-between items-center px-4">
+        <div className="flex gap-8 items-center">
+          <a href="/">
+            <img src="/logo.jpg" className="w-10 h-10" alt="LOGO" />
+          </a>
           <a>Numero telefonico</a>
         </div>
         <button onClick={toggleMenu} className="text-xl font-bold p-4">
@@ -62,17 +72,41 @@ const Header = () => {
               <div className="flex py-8 px-4">
                 <div>
                   <ul className="space-y-8">
-                    <li className="text-2xl hover:text-amber-600 cursor-pointer">
-                      Home
+                    <li
+                      className={`text-2xl ${
+                        esUrlActiva("/")
+                          ? "text-amber-600"
+                          : "hover:text-amber-600"
+                      } cursor-pointer`}
+                    >
+                      <a href="/">Home</a>
                     </li>
-                    <li className="text-2xl hover:text-amber-600 cursor-pointer">
-                      About
+                    <li
+                      className={`text-2xl ${
+                        esUrlActiva("/about")
+                          ? "text-amber-600"
+                          : "hover:text-amber-600"
+                      } cursor-pointer`}
+                    >
+                      <a href="/about">About</a>
                     </li>
-                    <li className="text-2xl hover:text-amber-600 cursor-pointer">
-                      Services
+                    <li
+                      className={`text-2xl ${
+                        esUrlActiva("/services")
+                          ? "text-amber-600"
+                          : "hover:text-amber-600"
+                      } cursor-pointer`}
+                    >
+                      <a href="/service">Services</a>
                     </li>
-                    <li className="text-2xl hover:text-amber-600 cursor-pointer">
-                      Contact
+                    <li
+                      className={`text-2xl ${
+                        esUrlActiva("/contact")
+                          ? "text-amber-600"
+                          : "hover:text-amber-600"
+                      } cursor-pointer`}
+                    >
+                      <a href="/contact">Contact</a>
                     </li>
                   </ul>
                 </div>
