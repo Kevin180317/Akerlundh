@@ -22,10 +22,10 @@ const Header = ({ urlActual }) => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className=" top-0 left-0 w-full bg-white shadow-md z-50 border border-black"
+      className=" top-0 left-0 w-full bg-white shadow-md z-50 border border-black fixed"
     >
       {" "}
-      <nav className="flex sticky justify-between items-center px-4">
+      <nav className="flex  justify-between items-center px-4">
         <div className="flex gap-8 items-center">
           <a href="/">
             <img src="/logo.jpg" className="w-10 h-10" alt="LOGO" />
@@ -83,21 +83,12 @@ const Header = ({ urlActual }) => {
                     </li>
                     <li
                       className={`text-2xl ${
-                        esUrlActiva("/about")
-                          ? "text-amber-600"
-                          : "hover:text-amber-600"
-                      } cursor-pointer`}
-                    >
-                      <a href="/about">About</a>
-                    </li>
-                    <li
-                      className={`text-2xl ${
                         esUrlActiva("/services")
                           ? "text-amber-600"
                           : "hover:text-amber-600"
                       } cursor-pointer`}
                     >
-                      <a href="/service">Services</a>
+                      <a href="/project">Projects</a>
                     </li>
                     <li
                       className={`text-2xl ${

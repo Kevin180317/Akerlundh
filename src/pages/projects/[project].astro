@@ -1,0 +1,35 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.astro";
+import { slide } from "astro:transitions";
+import DinamicProject from "@components/project/DinamicProject.astro";
+import PartnersList from "@components/PartnersList.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { project: "project1" } },
+    { params: { project: "project2" } },
+    { params: { project: "project3" } },
+    { params: { project: "project4" } },
+    { params: { project: "project5" } },
+    { params: { project: "project6" } },
+    { params: { project: "project7" } },
+    { params: { project: "project8" } },
+    { params: { project: "project9" } },
+    { params: { project: "project10" } },
+  ];
+}
+
+const { project } = Astro.params;
+---
+
+<Layout title="Welcome to Astro.">
+  <main transition:animate={slide({ duration: "1s" })}>
+    <DinamicProject project={project} />
+    <hr class="w-full border-black" />
+    <PartnersList />
+    <hr class="w-full border-black" />
+
+    <Footer />
+  </main>
+</Layout>

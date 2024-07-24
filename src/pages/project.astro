@@ -1,0 +1,63 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.astro";
+import { slide } from "astro:transitions";
+import ProjectSection from "@components/project/Projects";
+
+let projects = [
+  {
+    title: "Project 1",
+    href: "/projects/project1",
+  },
+  {
+    title: "Project 2",
+    href: "/projects/project2",
+  },
+  {
+    title: "Project 3",
+    href: "/projects/project3",
+  },
+  {
+    title: "Project 4",
+    href: "/projects/project4",
+  },
+  {
+    title: "Project 5",
+    href: "/projects/project5",
+  },
+  {
+    title: "Project 6",
+    href: "/projects/project6",
+  },
+  {
+    title: "Project 7",
+    href: "/projects/project7",
+  },
+  {
+    title: "Project 8",
+    href: "/projects/project8",
+  },
+  {
+    title: "Project 9",
+    href: "/projects/project9",
+  },
+  {
+    title: "Project 10",
+    href: "/projects/project10",
+  },
+];
+
+const projectsPerPage = 6;
+---
+
+<Layout title="Welcome to Astro.">
+  <main transition:animate={slide({ duration: "1s" })}>
+    <ProjectSection
+      client:visible
+      projects={projects}
+      projectsPerPage={projectsPerPage}
+    />
+    <hr class="w-full border-black" />
+    <Footer />
+  </main>
+</Layout>

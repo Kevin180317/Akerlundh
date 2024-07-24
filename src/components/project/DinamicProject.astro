@@ -1,0 +1,77 @@
+---
+let { project } = Astro.props;
+---
+
+<main>
+  <section
+    class="relative bg-gray-400 flex items-center justify-center h-screen flex-col"
+  >
+    <!-- Fondo -->
+    <h1 class="text-4xl font-bold text-white z-10">{project}</h1>
+    <p class="text-lg text-white z-10">This is the project {project} page.</p>
+
+    <div
+      class="absolute bottom-0 flex flex-col items-start justify-start bg-black bg-opacity-35 p-8 h-[400px] z-10 w-full"
+    >
+      <h2 class="text-3xl font-bold text-white">INTERIOR</h2>
+      <h3 class="text-2xl text-white">Entertainment Unit</h3>
+      <p class="text-white text-center mt-4 mb-8">
+        We bring you creative home design products that work together
+        beautifully to form inspired living spaces. Get thoughtful home interior
+        design elements that add real and lasting value to your interiors!
+      </p>
+      <a
+        href="/project"
+        class="flex items-center text-white px-8 py-4 bg-black hover:bg-gray-700 transition duration-300 uppercase ease-in-out"
+      >
+        regresar
+      </a>
+    </div>
+  </section>
+  <section>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 px-8 p-4 w-[80%] mx-auto gap-8 py-8"
+    >
+      <div class="flex justify-center items-center flex-col">
+        <p class="text-2xl mb-8">
+          The large wood panel of this entertainment unit is what gives it the
+          classic, warm feel. the drawers and cupboards ensure that there is
+          plenty of storage for all your electronics and knick-knacks. go for
+          this classic wood and white combo or pick shades that go well with the
+          rest of your decor
+        </p>
+        <p class="text-2xl mb-8">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut. magna aliquam erat volutpat enim ad
+          minim veniam. Duis autem vel eum iriure dolor in hendrerit in.
+        </p>
+      </div>
+      <div class="flex flex-col justify-start items-center px-4">
+        <div
+          class="flex justify-between w-full mb-12 text-2xl font-bold border-b border-black"
+        >
+          <p>Categories:</p>
+          <p>Interiors</p>
+        </div>
+        <div
+          class="flex justify-between w-full mb-12 text-2xl font-bold border-b border-black"
+        >
+          <p>Client:</p>
+          <p>Homekins Design</p>
+        </div>
+        <div
+          class="flex justify-between w-full mb-12 text-2xl font-bold border-b border-black"
+        >
+          <p>Completed:</p>
+          <p>Sept 30, 2020</p>
+        </div>
+        <div
+          class="flex justify-between w-full mb-12 text-2xl font-bold border-b border-black"
+        >
+          <p>Project type:</p>
+          <p>Home Decoration</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

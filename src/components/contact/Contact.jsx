@@ -2,7 +2,7 @@ import React from "react";
 
 function Contact() {
   return (
-    <div className="flex justify-center items-center md:h-screen flex-col  py-8">
+    <div className="flex justify-center items-center md:h-screen flex-col mt-16  py-8">
       <h1 className="text-4xl mb-8">
         Get in touch with us to design your{" "}
         <strong className="text-yellow-500">dream</strong> home
