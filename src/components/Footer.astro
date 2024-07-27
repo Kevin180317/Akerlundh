@@ -1,3 +1,7 @@
+---
+let date = new Date().getFullYear();
+---
+
 <main>
   <footer
     class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:w-[80%] mx-auto gap-8 px-8 py-16 md:py-4 h-80 items-center"
@@ -38,12 +42,12 @@
       <div class="flex gap-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-brand-meta"
+          class="stroke-black hover:stroke-amber-600 cursor-pointer"
           width="44"
           height="44"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="#000000"
+          stroke="curentColor"
           fill="none"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -58,12 +62,12 @@
         </svg>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-brand-instagram"
+          class="stroke-black hover:stroke-amber-600 cursor-pointer"
           width="44"
           height="44"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="#000000"
+          stroke="curentColor"
           fill="none"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -77,12 +81,12 @@
         </svg>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-brand-linkedin"
+          class="stroke-black hover:stroke-amber-600 cursor-pointer"
           width="44"
           height="44"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="#000000"
+          stroke="curentColor"
           fill="none"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -98,12 +102,12 @@
         </svg>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-brand-x"
+          class="stroke-black hover:stroke-amber-600 cursor-pointer"
           width="44"
           height="44"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="#000000"
+          stroke="curentColor"
           fill="none"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -119,7 +123,11 @@
   <hr class="border border-black w-full" />
   <div class="hidden md:block w-[80%] mx-auto px-8">
     <p class="text-start text-xl font-light py-4">
-      © Copyrights 2020 Homekins All rights reserved.
+      © Copyrights {date}
+      {" "}
+      <a href="/" class="hover:text-amber-600 hover:underline"> Akerlundh. </a>
+      {" "}
+      All rights reserved.
     </p>
   </div>
 </main>

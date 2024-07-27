@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const Header = ({ urlActual }) => {
   // Accede a la URL a través de los props
+  let date = new Date().getFullYear();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -25,7 +26,7 @@ const Header = ({ urlActual }) => {
       className=" top-0 left-0 w-full bg-white shadow-md z-50 border border-black fixed"
     >
       {" "}
-      <nav className="flex  justify-between items-center px-4">
+      <nav className="flex justify-between items-center px-4">
         <div className="flex gap-8 items-center">
           <a href="/">
             <img src="/logo.jpg" className="w-10 h-10" alt="LOGO" />
@@ -67,45 +68,81 @@ const Header = ({ urlActual }) => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.3 }}
-              className="fixed top-0 right-0 h-full w-64 bg-white shadow-xl z-20 flex flex-row"
+              className="fixed top-0 right-0 md:h-full h-screen md:w-96 bg-white shadow-xl z-20 flex flex-row"
             >
-              <div className="flex py-8 px-4">
-                <div>
-                  <ul className="space-y-8">
-                    <li
-                      className={`text-2xl ${
-                        esUrlActiva("/")
-                          ? "text-amber-600"
-                          : "hover:text-amber-600"
-                      } cursor-pointer`}
-                    >
-                      <a href="/">Home</a>
-                    </li>
-                    <li
-                      className={`text-2xl ${
-                        esUrlActiva("/services")
-                          ? "text-amber-600"
-                          : "hover:text-amber-600"
-                      } cursor-pointer`}
-                    >
-                      <a href="/project">Projects</a>
-                    </li>
-                    <li
-                      className={`text-2xl ${
-                        esUrlActiva("/contact")
-                          ? "text-amber-600"
-                          : "hover:text-amber-600"
-                      } cursor-pointer`}
-                    >
-                      <a href="/contact">Contact</a>
-                    </li>
-                  </ul>
+              <nav className="mb-8 p-16">
+                <ul className="flex flex-col space-y-12">
+                  <li
+                    className={`text-4xl ${
+                      esUrlActiva("/")
+                        ? "text-amber-600"
+                        : "hover:text-amber-600"
+                    } cursor-pointer`}
+                  >
+                    <a href="/">Home</a>
+                  </li>
+                  <li
+                    className={`text-4xl ${
+                      esUrlActiva("/project")
+                        ? "text-amber-600"
+                        : "hover:text-amber-600"
+                    } cursor-pointer`}
+                  >
+                    <a href="/project">Projects</a>
+                  </li>
+                  <li
+                    className={`text-4xl ${
+                      esUrlActiva("/contact")
+                        ? "text-amber-600"
+                        : "hover:text-amber-600"
+                    } cursor-pointer`}
+                  >
+                    <a href="/contact">Contact</a>
+                  </li>
+                </ul>
+                <div className="py-24">
+                  <p className="font-bold text-xl mb-4 hover:text-amber-600 cursor-pointer">
+                    (+6221) 000 888 999
+                  </p>
+                  <p className="font-bold text-xl mb-4 hover:text-amber-600 cursor-pointer">
+                    support@homekins.com{" "}
+                  </p>
+                  <p className="font-bold text-xl mb-4 hover:text-amber-600 cursor-pointer">
+                    129 Park street, New York 10903
+                  </p>
                 </div>
-                <div className="absolute top-0 right-0 py-8 px-8">
-                  <button onClick={toggleMenu} className="text-3xl">
-                    X
-                  </button>
+                <div className="absolute md:bottom-10">
+                  <p className="text-2xl text-gray-400">
+                    © {date}{" "}
+                    <a
+                      href="/"
+                      className="text-black font-bold hover:text-amber-600 hover:underline"
+                    >
+                      Akerlundh.
+                    </a>{" "}
+                    All rights reserved
+                  </p>
                 </div>
+              </nav>
+              <div className="absolute right-0 top-0">
+                <button onClick={toggleMenu} className="p-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-x hover:text-amber-600"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                </button>
               </div>
             </motion.aside>
           </>

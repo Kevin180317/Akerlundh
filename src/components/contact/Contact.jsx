@@ -2,8 +2,8 @@ import React from "react";
 
 function Contact() {
   return (
-    <div className="flex justify-center items-center md:h-screen flex-col mt-16  py-8">
-      <h1 className="text-4xl mb-8">
+    <div className="flex justify-start items-start md:h-screen flex-col mt-16 py-8 px-4 md:px-8">
+      <h1 className="text-4xl mb-8 md:px-8">
         Get in touch with us to design your{" "}
         <strong className="text-yellow-500">dream</strong> home
       </h1>
@@ -11,13 +11,13 @@ function Contact() {
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107730.52572552096!2d-117.03405671344565!3d32.45720375853736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9390226587bd3%3A0x14724bafa4e62456!2sTijuana%2C%20B.C.!5e0!3m2!1ses-419!2smx!4v1721701509216!5m2!1ses-419!2smx"
         width="800"
         height="450"
-        className="mb-8"
+        className="mb-8 w-full h-64 md:px-8 md:h-[450px] border-0"
         style={{ border: "0" }}
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
-      <div className="grid grid-cols-1 md:grid-cols-2 px-8 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:px-8 gap-8 ">
         <div>
           <h1 className="text-4xl mb-4">Talk with our expert designers</h1>
           <p className="text-xl">

@@ -6,7 +6,7 @@ import { slide } from "astro:transitions";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main transition:animate={slide({ duration: "1s" })}>
+  <main class="h-full w-full" transition:animate={slide({ duration: "1s" })}>
     <ContactForm />
     <hr class="w-full border-black" />
     <Footer />

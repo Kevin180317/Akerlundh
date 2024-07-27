@@ -7,15 +7,25 @@ let { project } = Astro.props;
     class="relative bg-gray-400 flex items-center justify-center h-screen flex-col"
   >
     <!-- Fondo -->
-    <h1 class="text-4xl font-bold text-white z-10">{project}</h1>
-    <p class="text-lg text-white z-10">This is the project {project} page.</p>
+    <h1 class="text-4xl font-bold text-white z-10 hidden md:block">
+      {project}
+    </h1>
+    <p class="text-lg text-white z-10 hidden md:block">
+      This is the project {project} page.
+    </p>
 
     <div
-      class="absolute bottom-0 flex flex-col items-start justify-start bg-black bg-opacity-35 p-8 h-[400px] z-10 w-full"
+      class="absolute bottom-0 flex flex-col items-start justify-start bg-black bg-opacity-35 p-8 md:h-[400px] z-10 w-full"
     >
+      <h1 class="text-4xl font-bold text-white z-10 md:hidden block mb-2">
+        {project}
+      </h1>
+      <p class="text-lg text-white z-10 md:hidden block mb-8">
+        This is the project {project} page.
+      </p>
       <h2 class="text-3xl font-bold text-white">INTERIOR</h2>
       <h3 class="text-2xl text-white">Entertainment Unit</h3>
-      <p class="text-white text-center mt-4 mb-8">
+      <p class="text-white text-start md:text-center mt-4 mb-8">
         We bring you creative home design products that work together
         beautifully to form inspired living spaces. Get thoughtful home interior
         design elements that add real and lasting value to your interiors!
@@ -30,7 +40,7 @@ let { project } = Astro.props;
   </section>
   <section>
     <div
-      class="grid grid-cols-1 md:grid-cols-2 px-8 p-4 w-[80%] mx-auto gap-8 py-8"
+      class="grid grid-cols-1 md:grid-cols-2 px-8 p-4 md:w-[80%] mx-auto gap-8 py-8"
     >
       <div class="flex justify-center items-center flex-col">
         <p class="text-2xl mb-8">
