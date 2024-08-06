@@ -64,11 +64,36 @@ function Services({ cards }) {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: index === 1 ? -300 : 300 }}
               transition={{ duration: 0.5 }}
-              className="flex md:justify-between items-center h-[500px] w-[400px] mb-8 md:h-[600px] md:w-[400px] flex-col border bg-gray-500 text-white p-4 rounded-lg"
+              className="flex md:justify-between items-center flex-col border border-black shadow-gray-400 shadow-xl rounded-lg mb-4"
             >
-              <img src={card.img} alt={card.title} className="bg-gray-600" />
-              <h2 className="text-2xl font-bold mt-4">{card.title}</h2>
-              <p className="text-center mt-2">{card.description}</p>
+              <div className="relative group">
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="
+              w-96
+              md:h-[600px]
+              object-cover
+
+              
+              "
+                />
+                <motion.div
+                  className="absolute bottom-0 left-0 w-full bg-black bg-opacity-75 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 50 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <h2 className="text-2xl font-bold">{card.title}</h2>
+                  <p className="mt-2">{card.description}</p>
+                  <button className="bg-amber-500 text-white px-4 py-2 rounded-lg mt-4">
+                    <a href={card.link} className="text-white">
+                      Learn More
+                    </a>
+                  </button>
+                </motion.div>
+              </div>
             </motion.div>
           ))}
         </AnimatePresence>

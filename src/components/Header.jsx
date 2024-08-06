@@ -29,9 +29,17 @@ const Header = ({ urlActual }) => {
       <nav className="flex justify-between items-center px-4">
         <div className="flex gap-8 items-center">
           <a href="/">
-            <img src="/logo.jpg" className="w-10 h-10" alt="LOGO" />
+            <img src="/logo.png" className="w-10 h-10" alt="LOGO" />
           </a>
-          <a>Numero telefonico</a>
+          <a
+            className="text-xl font-semibold
+          hover:text-amber-600 cursor-pointer
+          "
+            href="https://wa.me/+18583167656"
+            target="_blank"
+          >
+            +1 (858) 316-7656
+          </a>
         </div>
         <button onClick={toggleMenu} className="text-xl font-bold p-4">
           <svg
@@ -101,14 +109,22 @@ const Header = ({ urlActual }) => {
                   </li>
                 </ul>
                 <div className="py-24">
+                  <a
+                    href="https://wa.me/+18583167656"
+                    className="font-bold text-xl mb-4 hover:text-amber-600 cursor-pointer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    +1 (858) 316-7656{" "}
+                  </a>
+                  <a
+                    href="mailto:hfcustomdesign@gmail.com?subject=Consulta&body=Hola, me gustaría obtener más información."
+                    className="font-bold text-xl mb-4 hover:text-amber-600 cursor-pointer"
+                  >
+                    hfcustomdesign@gmail.com{" "}
+                  </a>
                   <p className="font-bold text-xl mb-4 hover:text-amber-600 cursor-pointer">
-                    (+6221) 000 888 999
-                  </p>
-                  <p className="font-bold text-xl mb-4 hover:text-amber-600 cursor-pointer">
-                    support@homekins.com{" "}
-                  </p>
-                  <p className="font-bold text-xl mb-4 hover:text-amber-600 cursor-pointer">
-                    129 Park street, New York 10903
+                    San Diego, California
                   </p>
                 </div>
                 <div className="absolute md:bottom-10">
