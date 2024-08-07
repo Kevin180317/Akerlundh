@@ -1,0 +1,80 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.astro";
+import { slide } from "astro:transitions";
+import DinamicService from "@components/service/DinamicService.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { service: "service1" } },
+    { params: { service: "service2" } },
+    { params: { service: "service3" } },
+    { params: { service: "service4" } },
+    { params: { service: "service5" } },
+    { params: { service: "service6" } },
+    { params: { service: "service7" } },
+    { params: { service: "service8" } },
+    { params: { service: "service9" } },
+    { params: { service: "service10" } },
+  ];
+}
+
+const { service } = Astro.params;
+
+const serviceData = {
+  service1: {
+    imageUrl: "/images/service1.jpg",
+    description: "Descripción del servicio 1",
+  },
+  service2: {
+    imageUrl: "/images/service2.jpg",
+    description: "Descripción del servicio 2",
+  },
+  service3: {
+    imageUrl: "/images/service3.jpg",
+    description: "Descripción del servicio 3",
+  },
+  service4: {
+    imageUrl: "/images/service4.jpg",
+    description: "Descripción del servicio 4",
+  },
+  service5: {
+    imageUrl: "/images/service5.jpg",
+    description: "Descripción del servicio 5",
+  },
+  service6: {
+    imageUrl: "/images/service6.jpg",
+    description: "Descripción del servicio 6",
+  },
+  service7: {
+    imageUrl: "/images/service7.jpg",
+    description: "Descripción del servicio 7",
+  },
+  service8: {
+    imageUrl: "/images/service8.jpg",
+    description: "Descripción del servicio 8",
+  },
+  service9: {
+    imageUrl: "/images/service9.jpg",
+    description: "Descripción del servicio 9",
+  },
+  service10: {
+    imageUrl: "/images/service10.jpg",
+    description: "Descripción del servicio 10",
+  },
+};
+
+const { imageUrl, description } = serviceData[service];
+---
+
+<Layout title="Welcome to Astro.">
+  <main transition:animate={slide({ duration: "1s" })}>
+    <DinamicService
+      service={service}
+      imageUrl={imageUrl}
+      description={description}
+    />
+    <hr class="w-full border-black" />
+    <Footer />
+  </main>
+</Layout>

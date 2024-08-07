@@ -4,7 +4,7 @@ let date = new Date().getFullYear();
 
 <main>
   <footer
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:w-[80%] mx-auto gap-8 px-8 py-16 md:py-4 h-80 items-center"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:w-[80%] mx-auto gap-8 px-8 py-16 md:py-4 h-auto items-start"
   >
     <div class="flex flex-col">
       <h1 class="text-5xl font-bold mb-4">About Us</h1>
@@ -21,24 +21,50 @@ let date = new Date().getFullYear();
       </a>
     </div>
     <div class="flex flex-col">
-      <h1 class="text-5xl font-bold mb-4">Usefull link</h1>
+      <h1 class="text-5xl font-bold mb-4">Useful Links</h1>
       <ul class="text-xl space-y-4 cursor-pointer">
-        <li>Frequently Asked</li>
-        <li>Terms & Conditions</li>
-        <li>Help Center</li>
-        <li>Contact Us</li>
+        <li>
+          <a
+            href="/terms-and-conditions"
+            class="hover:text-amber-600 hover:underline"
+          >
+            Terms & Conditions
+          </a>
+        </li>
+        <li>
+          <a
+            href="/privacy-policy"
+            class="hover:text-amber-600 hover:underline"
+          >
+            Privacy Policy
+          </a>
+        </li>
       </ul>
     </div>
-    <div class="flex flex-col mb-4">
+    <div class="flex flex-col">
       <h1 class="text-5xl font-bold mb-4">Features</h1>
       <ul class="text-xl space-y-4 cursor-pointer">
-        <li>Career</li>
-        <li>Brand Identity</li>
-        <li>Investment</li>
-        <li>Agency Patner</li>
+        <li>
+          <a href="/" class="hover:text-amber-600 hover:underline"> Home </a>
+        </li>
+        <li>
+          <a href="/project" class="hover:text-amber-600 hover:underline">
+            Projects
+          </a>
+        </li>
+        <li>
+          <a href="/services" class="hover:text-amber-600 hover:underline">
+            Services
+          </a>
+        </li>
+        <li>
+          <a href="/contact" class="hover:text-amber-600 hover:underline">
+            Contact
+          </a>
+        </li>
       </ul>
     </div>
-    <div class="flex flex-col mb-4">
+    <div class="flex flex-col">
       <h1 class="text-5xl font-bold mb-4">Follow Us</h1>
       <p class="text-xl font-light mb-4">
         Explore thousands of inspiring interior designs, from our best team
@@ -56,7 +82,7 @@ let date = new Date().getFullYear();
             height="44"
             viewBox="0 0 24 24"
             stroke-width="1.5"
-            stroke="curentColor"
+            stroke="currentColor"
             fill="none"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -79,7 +105,7 @@ let date = new Date().getFullYear();
             height="44"
             viewBox="0 0 24 24"
             stroke-width="1.5"
-            stroke="curentColor"
+            stroke="currentColor"
             fill="none"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -92,43 +118,6 @@ let date = new Date().getFullYear();
             <path d="M16.5 7.5l0 .01"></path>
           </svg>
         </a>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="stroke-black hover:stroke-amber-600 cursor-pointer"
-          width="44"
-          height="44"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="curentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path
-            d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
-          ></path>
-          <path d="M8 11l0 5"></path>
-          <path d="M8 8l0 .01"></path>
-          <path d="M12 16l0 -5"></path>
-          <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="stroke-black hover:stroke-amber-600 cursor-pointer"
-          width="44"
-          height="44"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="curentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
-          <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
-        </svg>
       </div>
     </div>
     <hr />

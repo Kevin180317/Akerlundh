@@ -29,34 +29,17 @@ function Services({ cards }) {
 
   return (
     <div className="md:h-screen md:w-[80%] mx-auto px-6">
-      <div className="text-start py-8">
+      <div className="flex justify-between py-8">
         <h1 className="text-4xl font-bold mb-8">Our Expertnesses</h1>
+        <a
+          href="/service"
+          className="text-4xl font-bold mb-8 hover:text-amber-500 hover:underline transition-colors duration-300
+        "
+        >
+          All of our services
+        </a>
       </div>
       <div className="flex justify-between items-center md:gap-8">
-        <button
-          className="hidden md:block"
-          onClick={() =>
-            setCurrentIndex((currentIndex - 1 + cards.length) % cards.length)
-          }
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="48"
-            height="48"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M5 12l14 0" />
-            <path d="M5 12l6 6" />
-            <path d="M5 12l6 -6" />
-          </svg>
-        </button>
         <AnimatePresence>
           {visibleCards.map((card, index) => (
             <motion.div
@@ -97,28 +80,6 @@ function Services({ cards }) {
             </motion.div>
           ))}
         </AnimatePresence>
-        <button
-          className="hidden md:block"
-          onClick={() => setCurrentIndex((currentIndex + 1) % cards.length)}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="48"
-            height="48"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M5 12l14 0" />
-            <path d="M13 18l6 -6" />
-            <path d="M13 6l6 6" />
-          </svg>
-        </button>
       </div>
       <div className="block md:hidden mb-8">
         <div className="flex justify-center"></div>

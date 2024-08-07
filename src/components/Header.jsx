@@ -100,6 +100,15 @@ const Header = ({ urlActual }) => {
                   </li>
                   <li
                     className={`text-4xl ${
+                      esUrlActiva("/services")
+                        ? "text-amber-600"
+                        : "hover:text-amber-600"
+                    } cursor-pointer`}
+                  >
+                    <a href="/services">Services</a>
+                  </li>
+                  <li
+                    className={`text-4xl ${
                       esUrlActiva("/contact")
                         ? "text-amber-600"
                         : "hover:text-amber-600"
