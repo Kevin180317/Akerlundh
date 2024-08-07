@@ -2,95 +2,12 @@
 import Footer from "@components/Footer.astro";
 import Layout from "@layouts/Layout.astro";
 import { slide } from "astro:transitions";
-
-const services = [
-  {
-    title: "Servicio 1",
-    description: "Descripción del servicio 1",
-    icon: "🔧",
-    link: "/services/service1",
-  },
-  {
-    title: "Servicio 2",
-    description: "Descripción del servicio 2",
-    icon: "💡",
-    link: "/services/service2",
-  },
-
-  {
-    title: "Servicio 3",
-    description: "Descripción del servicio 3",
-    icon: "🚀",
-    link: "/services/service3",
-  },
-  {
-    title: "Servicio 4",
-    description: "Descripción del servicio 4",
-    icon: "🌐",
-    link: "/services/service4",
-  },
-  {
-    title: "Servicio 5",
-    description: "Descripción del servicio 5",
-    icon: "📦",
-    link: "/services/service5",
-  },
-  {
-    title: "Servicio 6",
-    description: "Descripción del servicio 6",
-    icon: "🔒",
-    link: "/services/service6",
-  },
-  {
-    title: "Servicio 7",
-    description: "Descripción del servicio 7",
-    icon: "⚙️",
-    link: "/services/service7",
-  },
-  {
-    title: "Servicio 8",
-    description: "Descripción del servicio 8",
-    icon: "📈",
-    link: "/services/service8",
-  },
-  {
-    title: "Servicio 9",
-    description: "Descripción del servicio 9",
-    icon: "🛠️",
-    link: "/services/service9",
-  },
-  {
-    title: "Servicio 10",
-    description: "Descripción del servicio 10",
-    icon: "💻",
-    link: "/services/service10",
-  },
-];
+import Service from "@components/service/Service.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <main transition:animate={slide({ duration: "1s" })} class="p-8 mt-16">
-    <h1 class="text-4xl font-bold">All of our services</h1>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {
-        services.map((service) => (
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-            <div class="text-4xl mb-4">{service.icon}</div>
-            <h2 class="text-xl font-bold mb-2">{service.title}</h2>
-            <p class="text-gray-700">{service.description}</p>
-            <a
-              href={service.link}
-              class="text-blue-500 hover:underline
-                mt-4 block text-left 
-                 font-bold
-            "
-            >
-              Read more
-            </a>
-          </div>
-        ))
-      }
-    </div>
+    <Service />
     <hr class="w-full border-black" />
     <Footer />
   </main>

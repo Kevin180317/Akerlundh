@@ -33,7 +33,7 @@ const ProjectsPagination = ({ projects, projectsPerPage }) => {
   }, [currentPage]);
 
   return (
-    <main className="flex justify-start items-start w-[80%] mx-auto flex-col mt-16 py-8">
+    <main className="flex justify-start items-start md:w-[80%] mx-auto flex-col mt-16 py-8">
       <h1 className="text-4xl mb-8">
         Get in touch with us to design your{" "}
         <strong className="text-yellow-500">dream</strong> home
