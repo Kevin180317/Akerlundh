@@ -1,13 +1,13 @@
 ---
-import Footer from "@components/Footer.astro";
 import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.astro";
 import { slide } from "astro:transitions";
-import Service from "@components/service/Service.astro";
+import Politicas from "@components/Politicas.astro";
 ---
 
 <Layout title="Akerlundh">
-  <main transition:animate={slide({ duration: "1s" })} class="p-8 mt-16">
-    <Service />
+  <main class="h-full w-full" transition:animate={slide({ duration: "1s" })}>
+    <Politicas />
     <hr class="w-full border-black" />
     <Footer />
   </main>

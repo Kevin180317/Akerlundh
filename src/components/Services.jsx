@@ -32,7 +32,7 @@ function Services({ cards }) {
       <div className="flex justify-between py-8">
         <h1 className="text-4xl font-bold mb-8">Our Expertnesses</h1>
         <a
-          href="/service"
+          href="/services"
           className="text-4xl font-bold mb-8 hover:text-amber-500 hover:underline transition-colors duration-300
         "
         >

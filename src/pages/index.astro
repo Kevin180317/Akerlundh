@@ -13,44 +13,38 @@ import PartnersList from "@components/PartnersList.astro";
 const cards = [
   {
     id: 1,
-    title: "Servicio 1",
-    description: "Descripción del servicio 1",
+    title: " Custom-designed furniture",
+    description:
+      "Transform your space with custom-designed furniture that perfectly matches your style and needs. ",
     image: "/silla.jpg",
-    link: "/servicio-1",
+    link: "/services/service1",
   },
   {
     id: 2,
-    title: "Servicio 2",
-    description: "Descripción del servicio 2",
-    image: "/silla.jpg",
-    link: "/servicio-2",
+    title: " Tables",
+    description: " Tables for every style and purpose",
+    image: "/silla2.png",
+    link: "/services/service2",
   },
   {
     id: 3,
-    title: "Servicio 3",
-    description: "Descripción del servicio 3",
-    image: "/silla.jpg",
-    link: "/servicio-3",
-  },
-  {
-    id: 4,
-    title: "Servicio 4",
-    description: "Descripción del servicio 4",
-    image: "/silla.jpg",
-    link: "/servicio-4",
+    title: " Interior design services",
+    description:
+      "Elevate your living or working space with our expert interior design services.",
+    image: "/silla3.png",
+    link: "/services/service3",
   },
 ];
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Akerlundh">
   <main transition:animate={slide({ duration: "1s" })}>
     <Hero client:load />
     <About />
     <Services cards={cards} client:visible />
     <Partners />
     <Projects />
-    <Team />
-    <hr class="border border-black w-full" />
+    <!-- <Team /> -->
     <PartnersList />
     <hr class="border border-black w-full" />
     <Footer />

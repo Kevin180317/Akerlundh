@@ -1,0 +1,75 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { slide } from "astro:transitions";
+---
+
+<Layout title="Akerlundh">
+  <main
+    class="mt-32 md:w-[80%] mx-auto"
+    transition:animate={slide({ duration: "1s" })}
+  >
+    <section
+      class="flex flex-col items-center justify-center h-full w-full mt-8"
+    >
+      <h2 class="text-3xl font-semibold mb-6">About Our Company</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Mission</h3>
+          <p class="text-base leading-7">
+            Our mission is to provide exceptional services and innovative
+            solutions that exceed our clients' expectations. We strive to create
+            a positive impact on people's lives through our products and
+            services, fostering lasting relationships based on trust and mutual
+            satisfaction. We believe in continuous improvement and adapting to
+            the changing needs of the market to always offer the best to our
+            clients.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Vision</h3>
+          <p class="text-base leading-7">
+            To be recognized as leaders in our sector, driving growth and
+            innovation through excellence and integrity. We aspire to be a
+            reference company that inspires others to follow our steps,
+            promoting an inclusive and collaborative work environment where each
+            individual can reach their full potential. Our vision is to be a
+            positive change agent in the industry and the community.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Values</h3>
+          <ul class="list-disc list-inside space-y-2">
+            <li class="text-base leading-7">
+              <strong>Service:</strong> We are dedicated to providing exceptional
+              service to our clients, ensuring that every interaction is positive
+              and satisfactory.
+            </li>
+            <li class="text-base leading-7">
+              <strong>Teamwork:</strong> We foster collaboration and mutual support
+              to achieve common goals, recognizing that together we are stronger.
+            </li>
+            <li class="text-base leading-7">
+              <strong>Responsibility:</strong> We take responsibility for our actions
+              and their outcomes, committed to transparency and accountability.
+            </li>
+            <li class="text-base leading-7">
+              <strong>Integrity:</strong> We act with honesty and transparency in
+              all our interactions, maintaining high ethical standards in everything
+              we do.
+            </li>
+            <li class="text-base leading-7">
+              <strong>Growth:</strong> We promote continuous personal and professional
+              development, encouraging our employees to learn and grow within the
+              company.
+            </li>
+            <li class="text-base leading-7">
+              <strong>Passion:</strong> We are passionate about what we do and strive
+              to do it with excellence, infusing enthusiasm and dedication into every
+              project.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

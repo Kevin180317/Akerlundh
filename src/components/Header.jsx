@@ -23,7 +23,7 @@ const Header = ({ urlActual }) => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className=" top-0 left-0 w-full bg-white shadow-md z-50 border border-black fixed"
+      className=" top-0 left-0 w-full bg-white shadow-md z-50  fixed"
     >
       {" "}
       <nav className="flex justify-between items-center px-4">
@@ -106,6 +106,15 @@ const Header = ({ urlActual }) => {
                     } cursor-pointer`}
                   >
                     <a href="/services">Services</a>
+                  </li>
+                  <li
+                    className={`text-4xl ${
+                      esUrlActiva("/about")
+                        ? "text-amber-600"
+                        : "hover:text-amber-600"
+                    } cursor-pointer`}
+                  >
+                    <a href="/about">About</a>
                   </li>
                   <li
                     className={`text-4xl ${
