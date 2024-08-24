@@ -1,10 +1,38 @@
 ---
 let { project } = Astro.props;
+
+let url = Astro.url.pathname;
+
+let backgroundImage = "";
+if (url.includes("/projects/project1")) {
+  backgroundImage = "/banner1.webp";
+} else if (url.includes("/projects/project2")) {
+  backgroundImage = "/banner2.webp";
+} else if (url.includes("/projects/project3")) {
+  backgroundImage = "/banner3.webp";
+} else if (url.includes("/projects/project4")) {
+  backgroundImage = "/banner4.webp";
+} else if (url.includes("/projects/project5")) {
+  backgroundImage = "/banner5.webp";
+} else if (url.includes("/projects/project6")) {
+  backgroundImage = "/banner6.webp";
+} else if (url.includes("/projects/project7")) {
+  backgroundImage = "/banner7.webp";
+} else if (url.includes("/projects/project8")) {
+  backgroundImage = "/banner8.webp";
+} else if (url.includes("/projects/project9")) {
+  backgroundImage = "/banner9.webp";
+} else if (url.includes("/projects/project10")) {
+  backgroundImage = "/banner10.webp";
+} else {
+  backgroundImage = "/default-banner.webp"; // Imagen por defecto si no coincide con ningún proyecto específico
+}
 ---
 
 <main>
   <section
-    class="relative bg-gray-400 flex items-center justify-center h-screen flex-col"
+    class="relative flex items-center justify-center h-screen flex-col"
+    style={`background-image: url('${backgroundImage}'); background-size: cover; background-position: center;`}
   >
     <!-- Fondo -->
     <h1 class="text-4xl font-bold text-white z-10 hidden md:block">
@@ -34,13 +62,13 @@ let { project } = Astro.props;
         href="/project"
         class="flex items-center text-white px-8 py-4 bg-black hover:bg-gray-700 transition duration-300 uppercase ease-in-out"
       >
-        regresar
+        Back to Projects
       </a>
     </div>
   </section>
   <section>
     <div
-      class="grid grid-cols-1 md:grid-cols-2 px-8 p-4 md:w-[80%] mx-auto gap-8 py-8"
+      class="grid grid-cols-1 md:grid-cols-2 md:px-0 px-8 p-4 md:w-[80%] mx-auto gap-8 py-8"
     >
       <div class="flex justify-center items-center flex-col">
         <p class="text-2xl mb-8">
@@ -56,7 +84,7 @@ let { project } = Astro.props;
           minim veniam. Duis autem vel eum iriure dolor in hendrerit in.
         </p>
       </div>
-      <div class="flex flex-col justify-start items-center px-4">
+      <div class="flex flex-col justify-start items-center md:px-4">
         <div
           class="flex justify-between w-full mb-12 text-2xl font-bold border-b border-black"
         >

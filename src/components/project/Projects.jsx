@@ -33,7 +33,7 @@ const ProjectsPagination = ({ projects, projectsPerPage }) => {
   }, [currentPage]);
 
   return (
-    <main className="flex justify-start items-start md:w-[80%] mx-auto flex-col mt-16 py-8">
+    <main className="flex justify-start items-start md:w-[80%] mx-auto flex-col mt-16 py-8 px-8 md:px-0">
       <h1 className="text-4xl mb-8">
         Get in touch with us to design your{" "}
         <strong className="text-yellow-500">dream</strong> home
@@ -42,11 +42,24 @@ const ProjectsPagination = ({ projects, projectsPerPage }) => {
         {currentProjects.map((project) => (
           <div
             key={project.id}
-            className="w-full h-[700px] bg-gray-400 hover:bg-black hover:text-white"
+            className="relative w-full h-[700px] bg-gray-400 hover:bg-black group"
+            style={{
+              backgroundImage: `url(${project.image})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
           >
             <a href={project.href} className="block p-4">
-              <h2 className="text-xl font-bold">{project.title}</h2>
+              <h2 className="text-xl font-bold text-white">{project.title}</h2>
             </a>
+            <div className="absolute bottom-0 left-0 w-full p-4 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a
+                href={project.href}
+                className="text-white bg-yellow-500 hover:bg-yellow-700 font-bold py-2 px-4 rounded"
+              >
+                Enter Project
+              </a>
+            </div>
           </div>
         ))}
       </div>
@@ -66,8 +79,8 @@ const ProjectsPagination = ({ projects, projectsPerPage }) => {
               onClick={() => paginate(pageNumber)}
               className={`transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-md ${
                 currentPage === pageNumber
-                  ? "bg-green-600 text-white font-bold py-2 px-4 rounded cursor-not-allowed"
-                  : "bg-green-400 hover:bg-green-500 text-white font-bold py-2 px-4 rounded"
+                  ? "bg-yellow-600 text-white font-bold py-2 px-4 rounded cursor-not-allowed"
+                  : "bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded"
               }`}
               disabled={currentPage === pageNumber}
             >

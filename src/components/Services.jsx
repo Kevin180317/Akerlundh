@@ -29,24 +29,21 @@ function Services({ cards }) {
 
   return (
     <div className="md:h-screen md:w-[80%] mx-auto px-6">
-      <div className="flex justify-between py-8">
+      <div className="flex md:justify-between py-8">
         <h1 className="text-4xl font-bold mb-8">Our Expertnesses</h1>
         <a
           href="/services"
-          className="text-4xl font-bold mb-8 hover:text-amber-500 hover:underline transition-colors duration-300
+          className="text-4xl hidden md:block font-bold mb-8 hover:text-amber-500 hover:underline transition-colors duration-300
         "
         >
           All of our services
         </a>
       </div>
       <div className="flex justify-between items-center md:gap-8">
-        <AnimatePresence>
+        <AnimatePresence mode="popLayout">
           {visibleCards.map((card, index) => (
             <motion.div
               key={card.title}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: index === 1 ? -300 : 300 }}
-              transition={{ duration: 0.5 }}
               className="flex md:justify-between items-center flex-col border border-black shadow-gray-400 shadow-xl rounded-lg mb-4"
             >
               <div className="relative group">
@@ -55,6 +52,7 @@ function Services({ cards }) {
                   alt={card.title}
                   className="
               w-96
+              h-[450px]
               md:h-[600px]
               object-cover
 
@@ -66,7 +64,6 @@ function Services({ cards }) {
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 50 }}
-                  transition={{ duration: 0.3 }}
                 >
                   <h2 className="text-2xl font-bold">{card.title}</h2>
                   <p className="mt-2">{card.description}</p>
@@ -99,6 +96,13 @@ function Services({ cards }) {
             </button>
           ))}
       </div>
+      <a
+        href="/services"
+        className="text-4xl md:hidden block font-bold mb-8 hover:text-amber-500 hover:underline transition-colors duration-300
+        "
+      >
+        All of our services
+      </a>
     </div>
   );
 }
