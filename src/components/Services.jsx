@@ -60,14 +60,14 @@ function Services({ cards }) {
               "
                 />
                 <motion.div
-                  className="absolute bottom-0 left-0 w-full bg-black bg-opacity-75 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute bottom-0 left-0 w-full bg-black h-52 bg-opacity-75 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 50 }}
                 >
                   <h2 className="text-2xl font-bold">{card.title}</h2>
                   <p className="mt-2">{card.description}</p>
-                  <button className="bg-amber-500 text-white px-4 py-2 rounded-lg mt-4">
+                  <button className="bg-amber-500 text-white absolute bottom-4 px-4 py-2 rounded-lg mt-4">
                     <a href={card.link} className="text-white">
                       Learn More
                     </a>
