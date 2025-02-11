@@ -39,20 +39,45 @@ const ProjectsPagination = ({ projects, projectsPerPage }) => {
         <strong className="text-yellow-500">dream</strong> project
       </h1>
       <div className="mb-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-8">
-        {currentProjects.map((project) => (
+        {currentProjects.map((project, index) => (
           <div
-            key={project.id}
-            className="relative w-full h-[700px] bg-gray-400 hover:bg-black group"
-            style={{
-              backgroundImage: `url(${project.image})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            key={index}
+            className="relative w-full h-[700px] bg-gray-400 hover:bg-black group overflow-hidden"
           >
-            <a href={project.href} className="block p-4">
+            {/* Renderizar video para el quinto proyecto */}
+            {index + indexOfFirstProject === 4 ? ( // El quinto proyecto tiene índice 4
+              <video
+                className="w-full h-full object-cover absolute top-0 left-0 z-0"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="/hero2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              // Renderizar imagen para los demás proyectos
+              <div
+                className="w-full h-full absolute top-0 left-0 z-0"
+                style={{
+                  backgroundImage: `url(${project.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+            )}
+
+            {/* Título del proyecto */}
+            <a
+              href={project.href}
+              className="block p-4 absolute top-0 left-0 z-10"
+            >
               <h2 className="text-xl font-bold text-white">{project.title}</h2>
             </a>
-            <div className="absolute bottom-0 left-0 w-full p-4 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+
+            {/* Botón "Enter Project" */}
+            <div className="absolute bottom-0 left-0 w-full p-4 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
               <a
                 href={project.href}
                 className="text-white bg-yellow-500 hover:bg-yellow-700 font-bold py-2 px-4 rounded"

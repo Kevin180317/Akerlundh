@@ -1,65 +1,93 @@
 ---
 const services = [
   {
-    title: "Servicio 1",
-    description: "Descripción del servicio 1",
-    icon: "🔧",
-    link: "/services/service1",
+    title: "Customized Sofas and Armchairs",
+    description:
+      "Design and manufacturing of sofas and armchairs tailored to the client’s needs and preferences.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+            <path d="M5 12a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-6zm2 2v2h10v-2H7zM4 8V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2h-2V6H6v2H4z"/>
+          </svg>`,
+    link: "/services/customized-sofas-and-armchairs",
   },
   {
-    title: "Servicio 2",
-    description: "Descripción del servicio 2",
-    icon: "💡",
-    link: "/services/service2",
-  },
-
-  {
-    title: "Servicio 3",
-    description: "Descripción del servicio 3",
-    icon: "🚀",
-    link: "/services/service3",
+    title: "Made-to-Measure Dining Sets",
+    description:
+      "Dining tables and chairs specifically designed to fit the client’s space and style.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+            <path d="M4 4v2h16V4H4zm0 4v2h16V8H4zm2 4v6h12v-6H6zm2 2h8v2H8v-2z"/>
+          </svg>`,
+    link: "/services/made-to-measure-dining-sets",
   },
   {
-    title: "Servicio 4",
-    description: "Descripción del servicio 4",
-    icon: "🌐",
-    link: "/services/service4",
+    title: "Exclusive Beds and Headboards",
+    description:
+      "Creation of unique beds and headboards, custom-made for each bedroom.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+            <path d="M20 4v16H4V4h16zm-2 2H6v12h12V6zm-2 2v8H8V8h8z"/>
+          </svg>`,
+    link: "/services/exclusive-beds-and-headboards",
   },
   {
-    title: "Servicio 5",
-    description: "Descripción del servicio 5",
-    icon: "📦",
-    link: "/services/service5",
+    title: "Dining Tables",
+    description:
+      "Diverse styles and materials for dining tables, tailored to fit any space.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+            <path d="M4 4v2h16V4H4zm0 4v2h16V8H4zm2 4v6h12v-6H6zm2 2h8v2H8v-2z"/>
+          </svg>`,
+    link: "/services/dining-tables",
   },
   {
-    title: "Servicio 6",
-    description: "Descripción del servicio 6",
-    icon: "🔒",
-    link: "/services/service6",
+    title: "Coffee Tables",
+    description:
+      "Functional and aesthetic designs for coffee tables in living rooms.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+            <path d="M4 4v2h16V4H4zm0 4v2h16V8H4zm2 4v6h12v-6H6zm2 2h8v2H8v-2z"/>
+          </svg>`,
+    link: "/services/coffee-tables",
   },
   {
-    title: "Servicio 7",
-    description: "Descripción del servicio 7",
-    icon: "⚙️",
-    link: "/services/service7",
+    title: "Side Tables",
+    description: "Practical small tables for any corner of the home.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+            <path d="M4 4v2h16V4H4zm0 4v2h16V8H4zm2 4v6h12v-6H6zm2 2h8v2H8v-2z"/>
+          </svg>`,
+    link: "/services/side-tables",
   },
   {
-    title: "Servicio 8",
-    description: "Descripción del servicio 8",
-    icon: "📈",
-    link: "/services/service8",
+    title: "Desks",
+    description:
+      "Ergonomic and customized desks for home offices or workspaces.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+            <path d="M4 4v2h16V4H4zm0 4v2h16V8H4zm2 4v6h12v-6H6zm2 2h8v2H8v-2z"/>
+          </svg>`,
+    link: "/services/desks",
   },
   {
-    title: "Servicio 9",
-    description: "Descripción del servicio 9",
-    icon: "🛠️",
-    link: "/services/service9",
+    title: "Space Design Consulting",
+    description:
+      "Professional consulting to optimize the design and functionality of spaces.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm1-13h-2v6h2V7zm0 8h-2v2h2v-2z"/>
+          </svg>`,
+    link: "/services/space-design-consulting",
   },
   {
-    title: "Servicio 10",
-    description: "Descripción del servicio 10",
-    icon: "💻",
-    link: "/services/service10",
+    title: "Comprehensive Renovation Projects",
+    description:
+      "Full coordination of renovation projects, from design to execution.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+            <path d="M20 4v2h-4v2h4v2h-4v2h4v2h-4v2h4v2H4V4h16zm-8 2H8v12h4V6z"/>
+          </svg>`,
+    link: "/services/comprehensive-renovation-projects",
+  },
+  {
+    title: "Color and Material Selection",
+    description:
+      "Guidance in choosing the right colors and materials for each project.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-9h2v2h-2zm0-4h2v2h-2zm0 8h2v2h-2z"/>
+          </svg>`,
+    link: "/services/color-and-material-selection",
   },
 ];
 ---
@@ -70,18 +98,9 @@ const services = [
     {
       services.map((service) => (
         <div class="bg-white p-6 rounded-lg shadow-lg">
-          <div class="text-4xl mb-4">{service.icon}</div>
+          {/* <div class="text-4xl mb-4" set:html={service.icon} /> */}
           <h2 class="text-xl font-bold mb-2">{service.title}</h2>
           <p class="text-gray-700">{service.description}</p>
-          <a
-            href={service.link}
-            class="text-blue-500 hover:underline
-            mt-4 block text-left 
-             font-bold
-        "
-          >
-            Read more
-          </a>
         </div>
       ))
     }

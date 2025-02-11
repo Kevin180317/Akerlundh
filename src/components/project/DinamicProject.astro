@@ -4,46 +4,106 @@ let { project } = Astro.props;
 let url = Astro.url.pathname;
 
 let backgroundImage = "";
+let backgroundVideo = "";
+let title = "";
+let category = "";
+let objetive = "";
+let sucess = "";
+let duration = "";
+let results = "";
+let designed = "";
 if (url.includes("/projects/project1")) {
-  backgroundImage = "/banner1.webp";
+  backgroundImage = "/project-1.webp";
+  title = "Dining Area with Upholstered Bench and Marble Tables";
+  category = "Dining Area";
+  objetive =
+    "<strong>Objective</strong>: Create a comfortable and sophisticated space with custom-made furniture, incorporating a blue upholstered bench, decorative cushions, and tables with marble tops.";
+  sucess =
+    "<strong>Success Story and Client:</strong> Custom Furniture Project for a Restaurant with a Cozy and Elegant Design.";
+  results =
+    "<strong>Results:</strong> A harmonious ambiance that blends comfort and style, optimizing space usage to enhance the customer experience.";
+  duration = "6 weeks from design to installation.";
+  designed = "Cindy Carson";
 } else if (url.includes("/projects/project2")) {
-  backgroundImage = "/banner2.webp";
+  backgroundImage = "/project-2.webp";
+  title = "Theater Installation with Structures and Moldings";
+  category = "Theater Design";
+  objetive =
+    "<strong>Objective</strong>: Construction and installation of metal structures and decorative finishes featuring classic moldings and LED lighting to enhance the theater's aesthetics.";
+  sucess =
+    "<strong>Success Story and Client:</strong> Design and manufacturing project for a high-end theater. This theater was designed for a private residence. The owner, Rob Lajvardi, envisioned a space for family and friends.";
+  results =
+    "<strong>Results:</strong> A stunning space with architectural details that highlight the theater’s elegance and functionality, ensuring a spectacular ambiance.";
+  duration = "24 weeks from design to execution.";
+  designed = "Pia Lira, Rob Lajvardi, and Akerlundh Interiorismo";
 } else if (url.includes("/projects/project3")) {
-  backgroundImage = "/banner3.webp";
+  backgroundImage = "/project-3.webp";
+  title = "Terrace with Custom Furniture and Contemporary Design";
+  category = "Rooftop Bar";
+  objetive =
+    "<strong>Objective</strong>: Design and manufacture furniture that combines metal structures, wood, and textiles, integrating greenery and lighting to create a warm and inviting atmosphere.";
+  sucess =
+    "<strong>Success Story and Client:</strong> Project for a rooftop bar with a modern and dynamic concept.";
+  results =
+    "<strong>Results:</strong> A vibrant and functional space featuring comfortable seating, durable tables, and a layout that maximizes the user experience in an open-air setting.";
+  duration = "8 weeks for design, manufacturing, and installation.";
+  designed = "Casa Duhagon";
 } else if (url.includes("/projects/project4")) {
-  backgroundImage = "/banner4.webp";
+  backgroundImage = "/project-4.webp";
+  title = "Waiting Area in Sales Showroom at Everett.lat ";
+  category = "Sales Showroom";
+  objetive =
+    "<strong>Objective</strong>: Manufacture furniture that combines render structures, wood, and textiles, incorporating cement finishes and lighting to create a warm and inviting atmosphere.";
+  sucess =
+    "<strong>Success Story and Client:</strong> Project for a condominium sales showroom with a modern concept and luxury finishes.";
+  results =
+    "<strong>Results:</strong> A luxurious and welcoming space featuring comfortable seating, large decorative cushions, and a layout that enhances the buyer’s experience during the condominium purchase process.";
+  duration = "3 weeks for manufacturing and installation.";
+  designed = "Casa Duhagon";
 } else if (url.includes("/projects/project5")) {
-  backgroundImage = "/banner5.webp";
-} else if (url.includes("/projects/project6")) {
-  backgroundImage = "/banner6.webp";
-} else if (url.includes("/projects/project7")) {
-  backgroundImage = "/banner7.webp";
-} else if (url.includes("/projects/project8")) {
-  backgroundImage = "/banner8.webp";
-} else if (url.includes("/projects/project9")) {
-  backgroundImage = "/banner9.webp";
-} else if (url.includes("/projects/project10")) {
-  backgroundImage = "/banner10.webp";
+  backgroundVideo = "/hero2.mp4"; // Asegúrate de tener el video en la carpeta correcta
+  title = "Curved Walnut Display Furniture for Puesto Restaurant Apparel";
+  category = "Restaurant Display";
+  objetive =
+    "<strong>Objective</strong>: Design and manufacture furniture that combines an antique wooden structure with metal elements, blending the historical character of the space with lighting to create a warm ambiance.";
+  sucess =
+    "<strong>Success Story and Client:</strong> Custom furniture created to showcase restaurant apparel with integrated LED strips and a luxury finish.";
+  results =
+    "<strong>Results:</strong> A warm and functional display with modern curves, LED strip lighting, and a layout that enhances the customer’s experience in selecting their desired apparel.";
+  duration = "3 weeks for design, manufacturing, and installation.";
+  designed = "Cindy Carson and Akerlundh";
 } else {
   backgroundImage = "/default-banner.webp"; // Imagen por defecto si no coincide con ningún proyecto específico
 }
 ---
 
 <main>
-  <section
-    class="relative flex items-center justify-center h-screen flex-col"
-    style={`background-image: url('${backgroundImage}'); background-size: cover; background-position: center;`}
-  >
-    <!-- Fondo -->
+  <section class="relative flex items-center justify-center h-screen flex-col">
+    <!-- Fondo de video para el proyecto 5 -->
+    {
+      backgroundVideo ? (
+        <video
+          class="absolute top-0 left-0 w-full h-full object-cover"
+          autoplay
+          loop
+          muted
+        >
+          <source src={backgroundVideo} type="video/mp4" />
+        </video>
+      ) : (
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+          style={`background-image: url('${backgroundImage}');`}
+        />
+      )
+    }
+
     <h1 class="text-4xl font-bold text-white z-10 hidden md:block">
-      {project}
+      {title}
     </h1>
-    <p class="text-lg text-white z-10 hidden md:block">
-      This is the project {project} page.
-    </p>
 
     <div
-      class="absolute bottom-0 flex flex-col items-start justify-start bg-black bg-opacity-35 p-8 md:h-[400px] z-10 w-full"
+      class="absolute bottom-0 flex flex-col items-start justify-start bg-black bg-opacity-35 p-8 md:h-[200px] z-10 w-full"
     >
       <h1 class="text-4xl font-bold text-white z-10 md:hidden block mb-2">
         {project}
@@ -51,13 +111,10 @@ if (url.includes("/projects/project1")) {
       <p class="text-lg text-white z-10 md:hidden block mb-8">
         This is the project {project} page.
       </p>
-      <h2 class="text-3xl font-bold text-white">INTERIOR</h2>
-      <h3 class="text-2xl text-white">Entertainment Unit</h3>
-      <p class="text-white text-start md:text-center mt-4 mb-8">
-        We bring you creative home design products that work together
-        beautifully to form inspired living spaces. Get thoughtful home interior
-        design elements that add real and lasting value to your interiors!
-      </p>
+      <h2 class="text-3xl font-bold text-white mb-8">
+        {category}
+      </h2>
+
       <a
         href="/project"
         class="flex items-center text-white px-8 py-4 bg-black hover:bg-gray-700 transition duration-300 uppercase ease-in-out"
@@ -66,48 +123,35 @@ if (url.includes("/projects/project1")) {
       </a>
     </div>
   </section>
+
   <section>
     <div
       class="grid grid-cols-1 md:grid-cols-2 md:px-0 px-8 p-4 md:w-[80%] mx-auto gap-8 py-8"
     >
       <div class="flex justify-center items-center flex-col">
-        <p class="text-2xl mb-8">
-          The large wood panel of this entertainment unit is what gives it the
-          classic, warm feel. the drawers and cupboards ensure that there is
-          plenty of storage for all your electronics and knick-knacks. go for
-          this classic wood and white combo or pick shades that go well with the
-          rest of your decor
-        </p>
-        <p class="text-2xl mb-8">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut. magna aliquam erat volutpat enim ad
-          minim veniam. Duis autem vel eum iriure dolor in hendrerit in.
-        </p>
+        <p class="text-2xl mb-8" set:html={sucess} />
+
+        <p class="text-2xl mb-8" set:html={objetive} />
+
+        <p class="text-2xl mb-8" set:html={results} />
       </div>
       <div class="flex flex-col justify-start items-center md:px-4">
         <div
           class="flex justify-between w-full mb-12 text-2xl font-bold border-b border-black"
         >
-          <p>Categories:</p>
-          <p>Interiors</p>
+          <p>Project duration:</p>
+          <p>
+            {duration}
+          </p>
         </div>
+
         <div
           class="flex justify-between w-full mb-12 text-2xl font-bold border-b border-black"
         >
-          <p>Client:</p>
-          <p>Homekins Design</p>
-        </div>
-        <div
-          class="flex justify-between w-full mb-12 text-2xl font-bold border-b border-black"
-        >
-          <p>Completed:</p>
-          <p>Sept 30, 2020</p>
-        </div>
-        <div
-          class="flex justify-between w-full mb-12 text-2xl font-bold border-b border-black"
-        >
-          <p>Project type:</p>
-          <p>Home Decoration</p>
+          <p>Designed by :</p>
+          <p>
+            {designed}
+          </p>
         </div>
       </div>
     </div>
