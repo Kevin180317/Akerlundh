@@ -66,12 +66,12 @@ function Services({ cards }) {
                   exit={{ opacity: 0, y: 50 }}
                 >
                   <h2 className="text-2xl font-bold">{card.title}</h2>
-                  <p className="mt-2">{card.description}</p>
-                  <button className="bg-amber-500 text-white absolute bottom-4 px-4 py-2 rounded-lg mt-4">
-                    <a href={card.link} className="text-white">
-                      Learn More
-                    </a>
-                  </button>
+                  <p className="mt-2">{card.description}</p>{" "}
+                  <a href={card.link} className="text-white">
+                    <button className="bg-amber-500 hover:bg-amber-400 text-white absolute bottom-4 px-4 py-2 rounded-lg mt-4">
+                      CONTACT US{" "}
+                    </button>{" "}
+                  </a>
                 </motion.div>
               </div>
             </motion.div>

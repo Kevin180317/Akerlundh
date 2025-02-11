@@ -27,6 +27,10 @@ const url = Astro.request.url;
     <Header urlActual={url} client:load />
     <slot />
   </body><style is:global>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: "Questrial", sans-serif;
       margin: 0;

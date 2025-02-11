@@ -36,7 +36,7 @@ const ProjectsPagination = ({ projects, projectsPerPage }) => {
     <main className="flex justify-start items-start md:w-[80%] mx-auto flex-col mt-16 py-8 px-8 md:px-0">
       <h1 className="text-4xl mb-8">
         Get in touch with us to design your{" "}
-        <strong className="text-yellow-500">dream</strong> home
+        <strong className="text-yellow-500">dream</strong> project
       </h1>
       <div className="mb-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-8">
         {currentProjects.map((project) => (

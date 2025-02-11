@@ -2,7 +2,7 @@ const Carrousel = () => {
   return (
     <div className="relative w-full h-screen md:h-screen">
       <video
-        src="/Hero.mp4"
+        src="/hero.webm"
         autoPlay
         muted
         loop
