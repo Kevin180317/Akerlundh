@@ -10,18 +10,45 @@ interface Props {
 const { title } = Astro.props;
 
 const url = Astro.request.url;
+const description = "Discover the best furniture in San Diego with our comprehensive guide. From modern to custom and luxury options, find the perfect pieces for your home. Explore affordable furniture stores and unique designs that suit your style. Your ultimate resource for furniture shopping in San Diego.";
+const keywords = "Furniture, Modern furniture, Custom furniture, Akerlundh, San Diego Furniture, Tijuana Furniture";
+const author = "Akerlundh";
+const publisher = "Prometheustij";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content={author} />
     <link rel="icon" type="image/svg+xml" href="/logo.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta name="publisher" content={publisher} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={url} />
     <ViewTransitions />
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": title,
+        "description": description,
+        "keywords": keywords,
+        "author": {
+          "@type": "Person",
+          "name": author
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": publisher
+        },
+        "url": url
+      })}
+    </script>
   </head>
   <body class="overflow-x-hidden">
     <Header urlActual={url} client:load />

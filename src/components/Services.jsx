@@ -28,12 +28,12 @@ function Services({ cards }) {
   }
 
   return (
-    <div className="md:h-screen md:w-[80%] mx-auto px-6">
+    <div className="md:w-[80%] mx-auto px-6">
       <div className="flex md:justify-between py-8">
         <h1 className="text-4xl font-bold mb-8">Our Expertnesses</h1>
         <a
           href="/services"
-          className="text-4xl hidden md:block font-bold mb-8 hover:text-amber-500 hover:underline transition-colors duration-300
+          className="text-4xl hidden md:block font-bold mb-8 md:hover:text-amber-500 hover:underline transition-colors duration-300 md:text-black text-amber-500
         "
         >
           All of our services
@@ -98,7 +98,7 @@ function Services({ cards }) {
       </div>
       <a
         href="/services"
-        className="text-4xl md:hidden block font-bold mb-8 hover:text-amber-500 hover:underline transition-colors duration-300
+        className="text-4xl md:hidden block font-bold mb-8 md:hover:text-amber-500 hover:underline transition-colors duration-300 md:text-black text-amber-500 
         "
       >
         All of our services
