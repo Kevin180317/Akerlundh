@@ -7,6 +7,6 @@ import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://akerlundh.netlify.app/",
-  integrations: [tailwind(), react(), sitemap(), robotsTxt()]
+  site: "https://akerlundhinteriorismo.com/",
+  integrations: [tailwind(), react(), sitemap(), robotsTxt()],
 });
