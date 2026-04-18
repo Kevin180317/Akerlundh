@@ -123,12 +123,12 @@ const Header = ({ urlActual }) => {
                   </li>
                 </ul>
                 <div className="py-24">
-                  <a
+                  {/* <a
                     href="mailto:akerlundhinteriorismo@gmail.com?subject=Interior Design Consultation&body=Hello!%0D%0A%0D%0AI'm interested in your furniture and interior design services. Could you please provide information about your consultation process and availability?%0D%0A%0D%0AThank you for your time.%0D%0A%0D%0ABest regards"
                     className="font-bold text-xl mb-4 hover:text-amber-600 cursor-pointer"
                   >
                     akerlundhinteriorismo@gmail.com{" "}
-                  </a>
+                  </a> */}
                   <p className="font-bold text-xl mb-4 hover:text-amber-600 cursor-pointer">
                     San Diego, California
                   </p>

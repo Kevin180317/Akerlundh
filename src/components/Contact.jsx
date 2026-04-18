@@ -39,8 +39,8 @@ function Contact() {
     setErrors({});
     try {
       const response = await axios.post(
-        "https://akerlundhinteriorismo.com/api/contact",
-        form
+        // "https://akerlundhinteriorismo.com/api/contact",
+        form,
       );
       if (response.status === 200) {
         toast.success("Message sent successfully!");
